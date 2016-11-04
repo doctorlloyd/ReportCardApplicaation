@@ -4,8 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.Settings;
-import android.widget.Toast;
 
 /**
  * Created by Admin on 2016/10/27.
@@ -90,7 +88,6 @@ public class SQLiteHelper extends SQLiteOpenHelper{
         cv.put(ADMIN_SURNAME,n);
         cv.put(CATEGORY,"admin");
         counter++;
-
         System.out.println(String.valueOf(db.insert(ADMIN_DATABASE_TABLE, null,cv)));
         db.close();
     }
